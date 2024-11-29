@@ -83,7 +83,7 @@ app.get("/", (request, response) => {
   if (request.session.user) {
     return response.redirect("/landing");
   }
-  response.render("index");
+  response.render("index", { user: request.session.user });
 });
 
 // GET /landing - Shows a welcome page for users, shows the names of all users if an admin
@@ -92,7 +92,10 @@ app.get("/landing", (request, response) => {
     return response.redirect("/login");
   }
   if (request.session.user.role === "admin") {
-    return response.render("landing", { users: USERS });
+    return response.render("landing", {
+      users: USERS,
+      user: request.session.user,
+    });
   }
   response.render("landing", { user: request.session.user });
 });
