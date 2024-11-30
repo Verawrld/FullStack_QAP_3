@@ -1,34 +1,41 @@
 body {
-    background: linear-gradient(90deg, rgba(93,142,251,1) 0%, rgba(93,142,251,1) 50%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(235, 235, 238) 0%, rgb(117, 132, 199) 50%, rgb(74, 84, 172) 100%);
     height: 100%;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
+    justify-content: center;
+    align-items: center;
     color: #F6F6F6;
 }
 
 .main-content {
     display: flex;
     justify-content: center;
-    flex: 1;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .main-content .error-message {
     color: yellow;
     font-weight: bold;
     font-size: 16px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .main-content h1 {
     font-size: 50px;
+    margin-bottom: 20px;
 }
 
 .main-content ul {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .main-content ul :not(:first-child) {
@@ -39,50 +46,130 @@ body {
     font-size: 20px;
 }
 
-.main-content a:link {
+.main-content a:link, .main-content a:visited {
     color: #F6F6F6;
-}
-  
-.main-content a:visited {
     text-decoration: none;
+    margin: 0 10px;
 }
 
-.main-content form {
-    font-size: 18px;
+.main-content a:hover, .main-content a:active {
+    text-decoration: underline;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-input-container {
+    margin-bottom: 15px;
+}
+
+.form-input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #5D8EFB;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #3A6FDB;
+}
+
+p {
+    text-align: center;
+}
+
+/* Styles for the main page buttons */
+.main-content .main-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.main-content form .form-input-container {
+.main-content .main-buttons a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    background: #5D8EFB;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.main-content .main-buttons a:hover {
+    background: #3A6FDB;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    gap: 10px; /* Adjust gap as needed */
+    margin-top: 20px;
 }
 
-.main-content form label {
-    padding-right: 5px;
+.round-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 5px;
+    border: 2px solid #007BFF;
+    border-radius: 25px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.main-content form input {
-    border-radius: 5px;
-    border: 0px;
-    font-size: 14px;
-    padding: 5px;
+.round-button:hover {
+    background-color: white;
+    color: #007BFF;
+    transform: scale(1.05);
 }
-
-.main-content button {
+.form-input-container input {
+    width: 90%; /* Adjust width to fit within the container */
+    padding: 8px; /* Adjust padding to make the input smaller */
     border: none;
-    background: #F6F6F6;
-    mix-blend-mode: screen;
-    padding: 6px;
     border-radius: 5px;
-    margin-left: 5px;
-    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
-.main-content .index-button-container button {
-    font-size: 25px;
-    padding: 10px;
+.form-container {
+    background-color: #5D8EFB; /* Ensure the background color is applied */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

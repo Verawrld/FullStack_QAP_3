@@ -9,8 +9,10 @@
     <%- include('partials/header', { title: "Home" }) %>
     <h1>Welcome to Our App</h1>
     <% if (!user) { %>
-    <a href="/login">Login</a>
-    <a href="/signup">Sign Up</a>
+    <div class="button-container">
+      <a href="/login" class="round-button">Login</a>
+      <a href="/signup" class="round-button">Sign Up</a>
+    </div>
     <% } else { %>
     <a href="/landing">Go to Dashboard</a>
     <% } %> <%- include('partials/footer') %>

@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
-    secret: "replace_this_with_a_secure_key",
+    secret: "123123123456576676755654",
     resave: false,
     saveUninitialized: true,
   })
@@ -45,7 +45,7 @@ app.get("/login", (request, response) => {
 });
 
 // POST /login - Allows a user to login
-app.post("/login", (request, response) => {
+app.post("/login", async (request, response) => {
   const { email, password } = request.body;
   const user = USERS.find((u) => u.email === email);
   if (user && bcrypt.compareSync(password, user.password)) {
